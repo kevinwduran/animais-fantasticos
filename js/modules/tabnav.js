@@ -12,7 +12,8 @@ export default class TabNav {
       sectionConteudo.classList.remove(this.activeClass);
     });
     const direcao = this.tabContent[index].dataset.anime; //data-anime="show-right"
-    this.tabContent[index].classList.add(this.activeClass, direcao); //a direção é passada aqui para ter a transição, apenas.
+    this.tabContent[index].classList.add(this.activeClass, direcao); /*a direção
+    é passada aqui para ter a transição, apenas. */
   }
 
   //adiciona os eventos as tabs
