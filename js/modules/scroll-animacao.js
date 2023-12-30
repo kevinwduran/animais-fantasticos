@@ -1,10 +1,12 @@
+import debounce from './debounce.js';
+
 export default class ScrollAnimacao {
   constructor(sections) {
     this.sections = document.querySelectorAll(sections);
     this.classAtivo = 'ativo';
     //animação acontece quando se passa o scroll na metade da tela
     this.windowMetade = window.innerHeight * 0.6;
-    this.checarDistancia = this.checarDistancia.bind(this);
+    this.checarDistancia = debounce(this.checarDistancia.bind(this), 50);
   }
 
   //pega a distância em cada objeto em relação ao topo do site
