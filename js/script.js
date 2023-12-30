@@ -36,7 +36,6 @@ menuMobile.init();
 
 //<li data-semana="1,2,3,4,5" data-horario="8,18">Seg à Sex das 8 às 18</li>
 const funcionamento = new Funcionamento('[data-semana]', 'aberto');
-console.log(funcionamento)
 funcionamento.init();
 
 fetchAnimais('../../animaisapi.json', '.numeros-grid');
